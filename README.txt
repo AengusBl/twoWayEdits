@@ -1,4 +1,4 @@
-This Apps Script script allows teams using a Google Sheets workbook to have edits in a main sheet and its daughter sheets be mirrored. All variables and strings identifying the original use were replaced by neutral placeholders. Here is a more detailed explanation:
+This is Apps Script script allows teams using a Google Sheets workbook to have edits in a main sheet and its daughter sheets be mirrored. All variables and strings identifying the original use were replaced by neutral placeholders. Here is a more detailed explanation:
 
 In a MS Excel or Google Sheets workbook, a cell can contain a formula or a value, but not both. Say a cell B3 contains the value "Hello world" and a cell F5 contains the value "=B3". Cell F5 will display the value "Hello world", and any edits made to the value of cell B3 will change the value cell F5 displays accordingly. However, cell F5 simply *displays* the value of cell B3, and no edits can made to the latter from the former. This script fixes that issue for a very specific use case.
 
@@ -19,3 +19,5 @@ Here are the prerequisites for this script to run and make more sense:
 
 
 What the script does to this setup is that edits made anywhere in columns K-P in the main tab will be *copied* to the correct cell in the correct daughter tab, and edits made anywhere in columns K-P in a daughter tab will be *copied* to the correct cell in the main tab.
+
+THE SCRIPT NOW SUPPORTS MULTIPLE EDITS, BUT DUE TO THE LIMITATIONS OF APPS SCRIPT, A BULK EDIT ANY BIGGER THAN THREE CELLS DOES A STACK OVERFLOW. This shouldn't be an issue in practice, but this may get fixed in the future.
