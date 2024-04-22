@@ -45,9 +45,7 @@ function onEdit(e) {
     makeEdit(sheet, row);
   }
   else{
-    let firstCellRegex = /^([^:]+):/;
-    let match = eventRange.getA1Notation().match(firstCellRegex)[1];           //Please let me know if you find a better way to get the top left cell in a Range object
-    let firstCellNumRow = Number(match.slice(1))
+    let firstCellNumRow = eventRange.rowStart;
     var userEditRows = Array.from({length: eventNumRows}, (_, index) => `${firstCellNumRow + index}`);
 
     if (eventInDaughterSheet){
