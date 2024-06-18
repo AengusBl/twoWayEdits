@@ -22,7 +22,7 @@ function onEdit(e) {
 
   //FUNCTION DEFINITIONS
 
- var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
   var mainSheet = ss.getSheetByName("Tasks");
   var eventInLangSheet = eventSheetName != mainSheet.getName();
   console.log("The event is in one of the language sheets: " + eventInLangSheet);
