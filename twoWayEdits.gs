@@ -24,8 +24,8 @@ function onEdit(e) {
 
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var mainSheet = ss.getSheetByName("Tasks");
-  var eventInLangSheet = eventSheetName != mainSheet.getName();
-  console.log("The event is in one of the language sheets: " + eventInLangSheet);
+  var eventInDaughterSheet = eventSheetName != mainSheet.getName();
+  console.log("The event is in one of the daughter sheets: " + eventInDaughterSheet);
   var eventRangeValue = eventRange.getValue();
   console.log("The value of 'eventRangeValue' is: " + eventRangeValue);
   var eventNumRows = eventRange.getNumRows();
